@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Helper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ADHD Helper</h1>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Pomodoro Timer -->
+        <section id="pomodoro">
+            <h2>Pomodoro Timer</h2>
+            <p id="timer-display">25:00</p>
+            <button id="start-timer">Start</button>
+            <button id="reset-timer">Reset</button>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </section>
+
+        <!-- Task Organizer -->
+        <section id="task-organizer">
+            <h2>Task Organizer</h2>
+            <input type="text" id="new-task" placeholder="Add a new task...">
+            <button id="add-task">Add Task</button>
+            <ul id="task-list"></ul>
+            <div>
+                <label for="task-priority">Set Priority:</label>
+                <select id="task-priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games-section">
+            <h2>Games</h2>
+            <!-- Focus Finder -->
+            <section id="focus-finder">
+                <h3>Focus Finder</h3>
+                <p id="focus-instructions">Find the smiling face!</p>
+                <div id="focus-grid"></div>
+                <p id="focus-status"></p>
+            </section>
+
+            <!-- Color Switch -->
+            <section id="color-switch">
+                <h3>Color Switch</h3>
+                <p id="color-prompt">Loading...</p>
+                <div id="color-options"></div>
+                <p id="color-feedback"></p>
+            </section>
+
+            <!-- Quick Math Challenge -->
+            <section id="quick-math">
+                <h3>Quick Math Challenge</h3>
+                <p id="math-problem">Loading...</p>
+                <input type="number" id="math-answer" placeholder="Your Answer">
+                <button id="submit-math">Submit</button>
+                <p id="math-feedback"></p>
+            </section>
+
+            <!-- Pattern Memory Game -->
+            <section id="pattern-memory">
+                <h3>Pattern Memory Game</h3>
+                <button id="start-pattern-game">Start Game</button>
+                <div id="pattern-display"></div>
+                <p id="pattern-feedback"></p>
+            </section>
+        </section>
+
+        <!-- Calm Zone -->
+        <section id="calm-zone">
+            <h2>Calm Zone</h2>
+            <p>Relax with calming music, podcasts, and breathing exercises:</p>
+            <ul>
+                <li><a href="https://open.spotify.com/playlist/37i9dQZF1DWV7EzJMK2FUI" target="_blank">Spotify: Relaxing Music</a></li>
+                <li><a href="https://www.youtube.com/watch?v=2OEL4P1Rz04" target="_blank">YouTube: 3 Hours Relaxing Piano</a></li>
+                <li><a href="https://open.spotify.com/show/5WHoI2TllnHbdzNNSJZEDg" target="_blank">Podcast: Mindfulness for ADHD</a></li>
+            </ul>
+            <section id="breathing-exercise">
+                <h3>Breathing Exercise</h3>
+                <div class="breathing-circle"></div>
+                <p id="breathing-instructions">Breathe In...</p>
+                <button id="start-breathing">Start</button>
+                <button id="stop-breathing">Stop</button>
+            </section>
+        </section>
+
+        <!-- Habit Tracker -->
+        <section id="habit-tracker">
+            <h2>Habit Tracker</h2>
+            <div id="habits">
+                <label>
+                    <input type="checkbox" id="drink-water"> Drink Water
+                </label>
+                <label>
+                    <input type="checkbox" id="exercise"> Exercise
+                </label>
+                <label>
+                    <input type="checkbox" id="read"> Read for 30 Minutes
+                </label>
+            </div>
+            <div>
+                <h3>Your Progress</h3>
+                <p>Weekly streak: <span id="weekly-streak">0</span></p>
+                <p>Completion rate: <span id="completion-rate">0%</span></p>
+            </div>
+        </section>
+
+        <!-- Motivational Quote -->
+        <section id="quote-section">
+            <h2>Motivational Quote</h2>
+            <p id="quote">"Loading your daily dose of motivation..."</p>
+        </section>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">Task Added Successfully!</div>
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scroll-to-top" class="fab">↑</button>
+
+    <footer>
+        <p>&copy; 2025 ADHD Helper</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
